@@ -59,6 +59,8 @@ $app->singleton(
 |
 */
 
+config(['app.telegram_bot_token' => env('TELEGRAM_BOT_TOKEN', '1234:ABCD')]);
+
 $app->configure('app');
 
 /*
