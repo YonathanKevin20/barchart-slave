@@ -34,8 +34,10 @@ class ResponseController extends Controller
                 "Last: ".$lastPrice."\n".
                 "Change: ".$priceChange;
 
+        $chatId = $telegram->getUpdates()[0]['message']['chat']['id'];
+
         $response = $telegram->sendMessage([
-            'chat_id' => '5062635856',
+            'chat_id' => $chatId,
             'text' => $text
           ]);
 
