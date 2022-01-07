@@ -59,9 +59,12 @@ $app->singleton(
 |
 */
 
+$app->configure('app');
+
 config(['app.telegram_bot_token' => env('TELEGRAM_BOT_TOKEN', '1234:ABCD')]);
 
-$app->configure('app');
+config(['app.barchart_laravel_token' => env('BARCHART_LARAVEL_TOKEN', 'abcd1234')]);
+config(['app.barchart_xsrf_token' => env('BARCHART_XSRF_TOKEN', 'abcd1234')]);
 
 /*
 |--------------------------------------------------------------------------
